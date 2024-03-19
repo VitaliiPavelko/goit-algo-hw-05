@@ -25,18 +25,18 @@ if __name__ == "__main__":
         min_value = min(array)
         max_value = max(array)
 
-        bound_element = float(input(f"Enter bound element in [{min_value}...{max_value}]: "))
+        bound_element = float(input(f"Введіть верхню межу в діапазоні [{min_value}...{max_value}]: "))
 
         if min_value <= bound_element <= max_value:
             iterations, upper_bound = binary_search(array, bound_element)
-            print(f"Number of iterations: {iterations}")
+            print(f"Кількість ітерацій: {iterations}")
 
             if upper_bound is not None:
-                print(f"Upper bound for {bound_element} is {upper_bound}")
+                print(f"Верхня межа {bound_element} = {upper_bound}")
             else:
-                print(f"No upper bound found for {bound_element} in the array.")
+                print(f"Верхня межа {bound_element} не знайдена в масиві.")
         else:
-            print("The bound element is out of the range of the array.")
+            print("Введена опорна межа не входить в діапазон.")
 
 
         
